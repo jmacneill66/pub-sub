@@ -7,7 +7,15 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
+	
 )
+
+type GameLog struct {
+	CurrentTime time.Time
+	Message     string
+	Username    string
+}
 
 func PrintClientHelp() {
 	fmt.Println("Possible commands:")

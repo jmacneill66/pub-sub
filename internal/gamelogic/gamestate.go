@@ -94,3 +94,9 @@ func (gs *GameState) GetPlayerSnap() Player {
 		Units:    Units,
 	}
 }
+
+func (gs *GameState) SetPaused(paused bool) {     //custom added
+	gs.mu.Lock()
+	defer gs.mu.Unlock()
+	gs.Paused = paused
+}
